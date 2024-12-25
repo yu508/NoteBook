@@ -1,0 +1,22 @@
+.myBtn {
+  background-color: #800020; /* Основний бордовий */
+  color: #FFFFFF; /* Білий текст */
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+
+  /* Ефект при наведенні */
+  &:hover {
+    background-color: #F4C2C2; /* Матовий рожевий */
+    color: #800020; /* Бордовий текст */
+    transform: scale(1.05);
+  }
+
+  /* Ефект при натисканні */
+  &:active {
+    transform: scale(0.95);
+  }
+}

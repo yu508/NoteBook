@@ -1,0 +1,18 @@
+.myInput {
+  width: 100%;
+  padding: 10px 15px;
+  margin: 5px 0;
+  border: 2px solid #9f0404; /* Матовий рожевий обвід */
+  border-radius: 5px;
+  background-color: rgba(195, 120, 120, 0.44); /* Молочний фон */
+  color: #d62222; /* Темно-сірий текст */
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+
+  /* Ефект при фокусі */
+  &:focus {
+    border-color: #800020; /* Основний бордовий */
+    box-shadow: 0 0 5px rgba(128, 0, 32, 0.5);
+  }
+}

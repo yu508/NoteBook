@@ -1,0 +1,33 @@
+.page__wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  gap: 10px;
+
+  .page {
+    padding: 8px 12px;
+    background-color: #F5F5DC; // Молочний фон
+    color: #800020; // Основний бордовий
+    border: 2px solid #F4C2C2; // Матовий рожевий обвід
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: #F4C2C2; // Матовий рожевий при наведенні
+      color: #800020; // Бордовий текст
+    }
+  }
+
+  .page__current {
+    background-color: #800020; // Основний бордовий
+    color: #FFFFFF; // Білий текст
+    border: 2px solid #800020; // Обвід бордовий
+    cursor: default;
+
+    &:hover {
+      background-color: #800020; // Без зміни кольору при наведенні
+    }
+  }
+}

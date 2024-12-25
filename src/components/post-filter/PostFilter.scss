@@ -1,0 +1,74 @@
+.post-filter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  max-width: 600px; /* Обмежуємо ширину */
+  margin: 0 auto 20px auto; /* Центруємо по горизонталі та додаємо відступ знизу */
+  padding: 10px;
+
+  input {
+    flex: 1; /* Займає доступний простір */
+    padding: 10px;
+    //border: 2px solid #F4C2C2; /* Матовий рожевий */
+    border-radius: 5px;
+    //background-color: #F5F5DC; /* Молочний фон */
+    color: #222222; /* Темно-сірий текст */
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+
+    &:focus {
+      border-color: #800020; /* Бордова рамка при фокусі */
+      box-shadow: 0 0 5px rgba(128, 0, 32, 0.5);
+    }
+  }
+
+  select {
+    padding: 10px;
+    border: 2px solid #F4C2C2;
+    border-radius: 5px;
+    //background-color: #F5F5DC;
+    color: #222222;
+    font-size: 14px;
+    cursor: pointer;
+    transition: border-color 0.3s;
+
+    &:hover {
+      border-color: #800020;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: #800020;
+    }
+  }
+
+  button {
+    background-color: #800020; /* Бордовий фон */
+    color: #FFFFFF; /* Білий текст */
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+
+    svg {
+      width: 20px;
+      height: 20px;
+      color: #FFFFFF;
+    }
+
+    &:hover {
+      background-color: #F4C2C2; /* Матовий рожевий */
+      color: #800020; /* Текст бордовий */
+    }
+
+    &:active {
+      transform: scale(0.95); /* Легке зменшення при кліку */
+    }
+  }
+}

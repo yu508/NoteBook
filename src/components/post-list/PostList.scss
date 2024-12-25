@@ -1,0 +1,60 @@
+.post-list__container {
+  max-width: 800px; /* Обмежена ширина */
+  margin: 0 auto; /* Центрування по горизонталі */
+  padding: 0 15px; /* Додаємо трохи внутрішнього відступу для адаптивності */
+  box-sizing: border-box;
+}
+
+.post {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  margin-bottom: 10px;
+  background-color: rgba(195, 120, 120, 0.44); // Молочний фон
+  border: 2px solid #0003e6; // Матовий рожевий
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.post-list {
+  &__title {
+    text-align: center;
+    color: #800020; // Основний бордовий
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  &__empty {
+    text-align: center;
+    color: #800020; // Основний бордовий
+    font-size: 20px;
+    margin-top: 20px;
+  }
+}
+
+/* Анімація для елементів */
+.post-enter {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.post-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 500ms, transform 500ms;
+}
+
+.post-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.post-exit-active {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 500ms, transform 500ms;
+}
