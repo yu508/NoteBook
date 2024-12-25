@@ -1,50 +1,66 @@
-# React + TypeScript + Vite
+# Система управління нотатками (NoteBook)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**NoteBook** — це проста веб-система, яка дозволяє користувачам створювати, переглядати, редагувати та видаляти нотатки. Додаток використовує сучасні технології, такі як MongoDB, Express.js, React та Node.js, для забезпечення зручного та інтуїтивного користувацького досвіду.
 
-Currently, two official plugins are available:
+## Основні функції
+- Реєстрація та авторизація користувачів.
+- Створення, перегляд, редагування та видалення нотаток.
+- Фільтрація та пошук нотаток за заголовком або описом.
+- Зручний та адаптивний інтерфейс.
+- Захищене збереження даних у базі даних MongoDB.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Використані технології
+- **Фронтенд:** React.js, TypeScript
+- **Бекенд:** Node.js, Express.js
+- **База даних:** MongoDB, Mongoose
+- **Стилізація:** CSS, Material-UI
+- **Хостинг:** (наприклад, Vercel для фронтенду, Render/Heroku для бекенду)
 
-## Expanding the ESLint configuration
+## Встановлення та налаштування
+1. **Клонування репозиторію**  
+   Скопіюйте репозиторій на свій локальний комп'ютер:
+   ```bash
+   git clone https://github.com/<ваш-логін>/NoteBook.git
+   cd NoteBook
+Встановлення залежностей
+Для фронтенду та бекенду виконайте наступні команди:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+cd server
+npm install
+cd ../src
+npm install
+Налаштування змінних середовища
+У папці server створіть файл .env із таким вмістом:
 
-- Configure the top-level `parserOptions` property like this:
+MONGO_URI=<ваш-рядок-підключення-mongodb>
+PORT=3001
+Запуск системи
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Бекенд:
+cd server
+npm start
+Фронтенд:
+cd src
+npm start
+Доступ до системи
+Відкрийте браузер і перейдіть за адресою http://localhost:3000.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Структура проєкту
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+NoteBook/
+├── server/           # Бекенд
+│   ├── controllers/  # Логіка обробки запитів
+│   ├── database/     # Налаштування бази даних
+│   └── server.ts     # Головний файл сервера
+├── src/              # Фронтенд
+│   ├── components/   # Компоненти інтерфейсу
+│   ├── pages/        # Сторінки програми
+│   └── App.tsx       # Головний компонент додатку
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+
+
+Як допомогти
+Ви можете надсилати свої пропозиції або зміни через Pull Request у цей репозиторій.
+
+Контакти
+Автор: Yulia Rybchak
